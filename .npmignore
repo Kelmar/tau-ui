@@ -1,0 +1,8 @@
+/lib
+/src/tests
+/tests
+/scripts
+/static
+.vscode
+tsconfig.json
+gulpfile.js
