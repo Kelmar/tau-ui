@@ -1,8 +1,6 @@
 # Tau
 
-This is the UI project for Paws.
-
-The ultimate goal will be to split this portion of Paws into its own project for reuse in LunaIRC or any other Electron based application.
+A UI library for Electron.
 
 ## Structure
 
