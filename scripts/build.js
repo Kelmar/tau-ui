@@ -61,16 +61,7 @@ function tsc_build()
     let project = tsc.createProject('tsconfig.json');
 
     return src('lib/**/*.ts', { sense: gulp.lastRun(tsc_build) })
-        .pipe(sourcemaps.init())
         .pipe(project())
-        .js
-        .pipe(sourcemaps.write({
-            // Return relative source map root directories per file.
-            sourceRoot: function (file) {
-                var sourceFile = path.join(file.cwd, file.sourceMap.file);
-                return path.relative(path.dirname(sourceFile), file.cwd);
-            }
-        }))
         .pipe(dest(DIST_DIR));
 }
 
