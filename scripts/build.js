@@ -7,7 +7,6 @@ const { src, dest } = gulp;
 const { promisify } = require('util');
 
 const tsc = require('gulp-typescript');
-const sourcemaps = require('gulp-sourcemaps');
 
 const less = require('gulp-less');
 const concat = require('gulp-concat');
@@ -60,7 +59,7 @@ function tsc_build()
 {
     let project = tsc.createProject('tsconfig.json');
 
-    return src('src/**/*.ts', { sense: gulp.lastRun(tsc_build) })
+    return src('lib/**/*.ts', { sense: gulp.lastRun(tsc_build) })
         .pipe(project())
         .pipe(dest(DIST_DIR));
 }
