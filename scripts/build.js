@@ -60,7 +60,7 @@ function tsc_build()
 {
     let project = tsc.createProject('tsconfig.json');
 
-    return src('lib/**/*.ts', { sense: gulp.lastRun(tsc_build) })
+    return src('src/**/*.ts', { sense: gulp.lastRun(tsc_build) })
         .pipe(project())
         .pipe(dest(DIST_DIR));
 }

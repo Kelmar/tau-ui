@@ -1,9 +1,9 @@
 {
     "name": "tau-ui",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "description": "A UI framework for Electron",
-    "main": "src/lib/index.js",
-    "types": "src/lib/index.d.ts",
+    "main": "src/index.js",
+    "types": "src/index.d.ts",
     "scripts": {
         "build": "gulp build",
         "clean": "gulp clean",
